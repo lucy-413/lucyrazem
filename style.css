@@ -44,11 +44,6 @@ li {
 icon {
   width: 1vw;
   height: 1vw;
-}
-
-a img {
-  width: 1vw;
-  height: 1vw;
   object-fit: contain;
 }
 
