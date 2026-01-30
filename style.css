@@ -8,10 +8,16 @@ body {
 footer {
   position: fixed;
   bottom: 0px;
-  height: 10px;
+  height: auto;
   background-color: black;
   width: 100%;
   border-top-style: dashed;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5vw;
 }
 
 a:link {
