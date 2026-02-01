@@ -7,9 +7,6 @@ function loadHTML(id, filename) {
     .then(text => {
       document.getElementById(id).innerHTML = text;
     })
-    .catch(error => {
-      console.log('Error loading the file:', error);
-    });
 }
 
 
