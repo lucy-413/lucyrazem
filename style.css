@@ -45,17 +45,15 @@ icon {
 
 div.okno {
   border: 2px dashed white;
-  margin-right: 3vw;
-  margin-left: 3vw;
   width:20%;
-  font-size:1vw;
-  padding: 1%
+  font-size:1.2vw;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  gap: 2vw;
+  justify-content: space-evenly;
 }
 .ascii1 {
   color: white
