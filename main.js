@@ -9,7 +9,14 @@ function loadHTML(id, filename) {
     })
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  loadHTML("nav-placeholder", "nav.html");
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   loadHTML("footer-placeholder", "footer.html");
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  loadHTML("hobbies-placeholder", "hobbies.html");
 });
