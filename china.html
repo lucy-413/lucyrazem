@@ -60,8 +60,8 @@
         var map = L.map('map', {
             zoomControl: false,
             attributionControl: false,
-            dragging: true,
-            scrollWheelZoom: true,
+            dragging: false,
+            scrollWheelZoom: false,
             doubleClickZoom: false,
             boxZoom: false,
             keyboard: false
@@ -72,14 +72,49 @@
             maxZoom: 20
         }).addTo(map);
 
-        var routeData = {
+var routeData = {
           "type": "FeatureCollection",
           "features": [
-            {"type":"Feature","properties":{},"geometry":{"coordinates":[[19.93804445876239,50.06238332738519],[21.006448085269056,52.23156048960587],[19.052506692917547,47.49385243258075],[28.731086408594933,41.27411771551357],[32.8543839553777,39.92093818291971],[44.8022029877703,41.69327840231122],[49.837816140891704,40.38293506354677],[51.679151395393376,43.17754401172198],[71.43852550791863,51.1260610828605],[76.93240196259012,43.24398030453608],[80.40478698448965,44.22908720091925],[108.93950609584112,34.262277632943054],[116.38963282063224,39.90174015230426],[121.47029150357662,31.23691890470836],[114.05501779608505,22.541335042802658],[21.00793421976647,52.23039662615574]],"type":"LineString"}},
-            {"type":"Feature","properties":{},"geometry":{"coordinates":[19.938,50.062],"type":"Point"}}, // Krakow
-            {"type":"Feature","properties":{},"geometry":{"coordinates":[49.837,40.383],"type":"Point"}}, // Baku
-            {"type":"Feature","properties":{},"geometry":{"coordinates":[51.677,43.179],"type":"Point"}}, // Aktau
-            {"type":"Feature","properties":{},"geometry":{"coordinates":[116.385,39.901],"type":"Point"}}  // Beijing
+            {
+              "type": "Feature",
+              "properties": {},
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [19.93804445876239, 50.06238332738519], // Krakow
+                  [21.006448085269056, 52.23156048960587], // Warsaw
+                  [19.052506692917547, 47.49385243258075], // Budapest
+                  [28.731086408594933, 41.27411771551357], // Istanbul
+                  [32.8543839553777, 39.92093818291971],   // Ankara
+                  [44.8022029877703, 41.69327840231122],   // Tbilisi
+                  [49.837816140891704, 40.38293506354677], // Baku
+                  [51.679151395393376, 43.17754401172198], // Aktau
+                  [71.43852550791863, 51.1260610828605],   // Astana
+                  [76.93240196259012, 43.24398030453608],  // Almaty
+                  [80.40478698448965, 44.22908720091925],  // Border
+                  [108.93950609584112, 34.262277632943054],// Xi'an
+                  [116.38963282063224, 39.90174015230426], // Beijing
+                  [121.47029150357662, 31.23691890470836], // Shanghai
+                  [114.05501779608505, 22.541335042802658] // Shenzhen
+                ]
+              }
+            },
+            
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [19.93804445876239, 50.06238332738519] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [21.006448085269056, 52.23156048960587] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [19.052506692917547, 47.49385243258075] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [28.731086408594933, 41.27411771551357] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [32.8543839553777, 39.92093818291971] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [44.8022029877703, 41.69327840231122] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [49.837816140891704, 40.38293506354677] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [51.679151395393376, 43.17754401172198] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [71.43852550791863, 51.1260610828605] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [76.93240196259012, 43.24398030453608] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [80.40478698448965, 44.22908720091925] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [108.93950609584112, 34.262277632943054] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [116.38963282063224, 39.90174015230426] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [121.47029150357662, 31.23691890470836] } },
+            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [114.05501779608505, 22.541335042802658] } }
           ]
         };
 
