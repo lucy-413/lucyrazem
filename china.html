@@ -65,11 +65,12 @@
             doubleClickZoom: false,
             boxZoom: false,
             keyboard: false
+            zoomSnap: 0.1
         });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
             subdomains: 'abcd',
-            maxZoom: 20
+            maxZoom: 40
         }).addTo(map);
 
 var routeData = {
@@ -129,15 +130,16 @@ var routeData = {
             },
             pointToLayer: function(feature, latlng) {
                 return L.circleMarker(latlng, {
-                    radius: 4,
+                    radius: 2,
                     color: 'white',
                     fillColor: 'white',
                     fillOpacity: 1
                 });
             }
         }).addTo(map);
+        
 
-        map.fitBounds(geojsonLayer.getBounds(), {padding: [50, 50]});
+map.fitBounds(geojsonLayer.getBounds(), {padding: [80, 80]});
     </script>
 </body>
 </html>
