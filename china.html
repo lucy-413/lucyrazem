@@ -65,12 +65,12 @@
             doubleClickZoom: false,
             boxZoom: false,
             keyboard: false
-            zoomSnap: 0.1
+
         });
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
             subdomains: 'abcd',
-            maxZoom: 40
+            maxZoom: 10
         }).addTo(map);
 
 var routeData = {
@@ -137,9 +137,8 @@ var routeData = {
                 });
             }
         }).addTo(map);
-        
 
-map.fitBounds(geojsonLayer.getBounds(), {padding: [80, 80]});
+        map.fitBounds(geojsonLayer.getBounds(), {padding: [50, 50]});
     </script>
 </body>
 </html>
