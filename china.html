@@ -45,8 +45,7 @@
             <h2>Krakow - Beijing</h2>
             <p>Currently planning a trip by train from Krakow, Poland to Beijing, PRC with my friends.</p>
             
-            <div id="map"></div>
-            
+            <iframe src="https://embed.viaduct.world/j/3EXYLZtV9UyABaLr?layer=Dark&tabs=map" width="100%" height="100%" style="border:dashed 2px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>   
         </div>
 
         <div id="hobbies-placeholder" class="okno"></div>
@@ -56,89 +55,6 @@
 
     <script src="main.js"></script>
 
-    <script>
-        var map = L.map('map', {
-            zoomControl: false,
-            attributionControl: false,
-            dragging: true,
-            scrollWheelZoom: true,
-            doubleClickZoom: true,
-            boxZoom: false,
-            keyboard: false
 
-        });
-
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            subdomains: 'abcd',
-            maxZoom: 10
-        }).addTo(map);
-
-var routeData = {
-          "type": "FeatureCollection",
-          "features": [
-            {
-              "type": "Feature",
-              "properties": {},
-              "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                  [19.93804445876239, 50.06238332738519], // Krakow
-                  [21.006448085269056, 52.23156048960587], // Warsaw
-                  [19.052506692917547, 47.49385243258075], // Budapest
-                  [28.731086408594933, 41.27411771551357], // Istanbul
-                  [32.8543839553777, 39.92093818291971],   // Ankara
-                  [44.8022029877703, 41.69327840231122],   // Tbilisi
-                  [49.837816140891704, 40.38293506354677], // Baku
-                  [51.679151395393376, 43.17754401172198], // Aktau
-                  [71.43852550791863, 51.1260610828605],   // Astana
-                  [76.93240196259012, 43.24398030453608],  // Almaty
-                  [80.40478698448965, 44.22908720091925],  // Border
-                  [108.93950609584112, 34.262277632943054],// Xi'an
-                  [116.38963282063224, 39.90174015230426], // Beijing
-                  [121.47029150357662, 31.23691890470836], // Shanghai
-                  [114.05501779608505, 22.541335042802658] // Shenzhen
-                ]
-              }
-            },
-            
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [19.93804445876239, 50.06238332738519] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [21.006448085269056, 52.23156048960587] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [19.052506692917547, 47.49385243258075] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [28.731086408594933, 41.27411771551357] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [32.8543839553777, 39.92093818291971] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [44.8022029877703, 41.69327840231122] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [49.837816140891704, 40.38293506354677] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [51.679151395393376, 43.17754401172198] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [71.43852550791863, 51.1260610828605] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [76.93240196259012, 43.24398030453608] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [80.40478698448965, 44.22908720091925] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [108.93950609584112, 34.262277632943054] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [116.38963282063224, 39.90174015230426] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [121.47029150357662, 31.23691890470836] } },
-            { "type": "Feature", "geometry": { "type": "Point", "coordinates": [114.05501779608505, 22.541335042802658] } }
-          ]
-        };
-
-        var geojsonLayer = L.geoJSON(routeData, {
-            style: function(feature) {
-                return {
-                    color: 'white',
-                    weight: 2,
-                    dashArray: '5, 5',
-                    opacity: 1
-                };
-            },
-            pointToLayer: function(feature, latlng) {
-                return L.circleMarker(latlng, {
-                    radius: 2,
-                    color: 'white',
-                    fillColor: 'white',
-                    fillOpacity: 1
-                });
-            }
-        }).addTo(map);
-
-        map.fitBounds(geojsonLayer.getBounds(), {padding: [50, 50]});
-    </script>
 </body>
 </html>
