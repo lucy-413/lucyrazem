@@ -1,90 +1,75 @@
+/* Główne rzeczy */
 body {
-  background-color: black;
-  color: white;
-  font-family: Courier;
-  text-align: center;
-  padding-bottom: 150px;
+    background-color: black;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: center;
+    padding-bottom: 150px;
 }
 
-footer {
-  position: fixed;
-  bottom: 0px;
-  background-color: black;
-  width: 100%;
-  border-top: 2px dashed white;
-}
-
-a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5vw;
-}
-
-a:link {
-  color: #720546;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #720546;
-}
-
-a:hover {
-  color: #580437;
-}
-
-a:active {
-  color: #580437;
-}
-
-icon {
-  width: 1vw;
-  height: 1vw;
-  object-fit: contain;
-}
-
-div.okno {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px dashed white;
-  width:25%;
-  font-size:1.1vw;
-  padding: 1%;
-  
-}
-
-.container {
-  display: flex;
-  justify-content: space-evenly;
-}
-.ascii1 {
-  color: white;
-  font-size: 1.2vw;
-}
-.ascii-middle {
-  color: #720546
-}
-.ascii-middle.is-hovered {
-  transition: color 0.1s linear;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-  background-clip: text;;
-  color: transparent;
-}
-title {
-  width:80%;
-}
 ::selection {
-  background: #720546;
-  color: black;
+    background: #720546;
+    color: black;
 }
 
+/* Linki */
+a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #720546;
+}
+
+a:hover,
+a:active {
+    color: #580437;
+}
+
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Title */
+.title {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+    border-top: 2px dashed white;
+}
+
+
+/* Okna */
+.okno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed white;
+    width: 25%;
+    font-size: 1.1vw;
+    padding: 1%;
+}
+
+/* Mapka */
 .map-scaler {
     width: 100%;
     height: 25vw;
     overflow: hidden;
     position: relative;
-    
     border: 2px dashed white; 
     box-sizing: border-box; 
 }
@@ -93,36 +78,28 @@ title {
     width: 200%;
     height: 200%;
     border: none;
-    
     -webkit-transform: scale(0.5);
     transform: scale(0.5);
-    
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 
-/*
-Source - https://stackoverflow.com/a/63302468
-Posted by Bartek
-Retrieved 2026-03-16, License - CC BY-SA 4.0
-*/
 
-.rainbow-box {
-    width: 80vw;
-    height: 200px;
-    border-radius: 5px;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%
-    );
+/* ASCII */
+
+.ascii1 {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.ascii-middle {
+    color: #720546;
+}
+
+.ascii-middle.is-hovered {
+    transition: color 0.1s linear;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }

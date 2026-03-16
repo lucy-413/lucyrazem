@@ -1,40 +1,38 @@
+/* Kolorki ASCII */
 
 
-// Kolorowe Logo
 const middleParts = document.querySelectorAll('.ascii-middle');
 
 middleParts.forEach(span => {
+    span.addEventListener('mouseenter', () => {
+        middleParts.forEach(s => s.classList.add('is-hovered'));
+    });
 
-  span.addEventListener('mouseenter', () => {
-    middleParts.forEach(s => s.classList.add('is-hovered'));
-  });
-
-
-  span.addEventListener('mouseleave', () => {
-    middleParts.forEach(s => s.classList.remove('is-hovered'));
-  });
+    span.addEventListener('mouseleave', () => {
+        middleParts.forEach(s => s.classList.remove('is-hovered'));
+    });
 });
+
+/* Ładowanie rzeczy */
 
 function loadHTML(id, filename) {
-  fetch(filename)
-    .then(response => {
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById(id).innerHTML = text;
-    })
+    const element = document.getElementById(id);
+    
+    if (!element) return; 
+
+    fetch(filename)
+        .then(response => {
+            if (!response.ok) throw new Error(`Could not load ${filename}`);
+            return response.text();
+        })
+        .then(text => {
+            element.innerHTML = text;
+        })
+        .catch(error => console.error('Error loading HTML:', error));
 }
 
-// Ładowanie rzeczy
-
-document.addEventListener("DOMContentLoaded", function() {
-  loadHTML("nav-placeholder", "nav.html");
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  loadHTML("footer-placeholder", "footer.html");
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  loadHTML("hobbies-placeholder", "hobbies.html");
+document.addEventListener("DOMContentLoaded", () => {
+    loadHTML("nav-placeholder", "nav.html");
+    loadHTML("hobbies-placeholder", "hobbies.html");
+    loadHTML("footer-placeholder", "footer.html");
 });
