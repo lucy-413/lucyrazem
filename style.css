@@ -12,7 +12,6 @@ footer {
   background-color: black;
   width: 100%;
   border-top: 2px dashed white;
-  z-index: 9999;
 }
 
 a {
@@ -61,17 +60,15 @@ div.okno {
 }
 .ascii1 {
   color: white;
-  font-size: 1.6vw;
+  font-size: 1.2vw;
 }
 .ascii-middle {
-  transition: color 0.3s;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-  background-clip: text;
-  -webkit-background-clip: text;
   color: #720546
 }
 .ascii-middle.is-hovered {
-  transition: color 0.3s;
+  transition: color 0.1s linear;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;;
   color: transparent;
 }
 title {
