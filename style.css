@@ -84,22 +84,28 @@ footer {
     transform-origin: 0 0;
 }
 
+/*
+Source - https://stackoverflow.com/a/63302468
+Posted by Bartek
+Retrieved 2026-03-16, License - CC BY-SA 4.0
+*/
 
-/* ASCII */
-
-.ascii1 {
-    color: white;
-    font-size: 1.2vw;
-}
-
-.ascii-middle {
-    color: #720546;
-}
-
-.ascii-middle.is-hovered {
-    transition: color 0.1s linear;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+.rainbow-box {
+    width: 80vw;
+    height: 200px;
+    border-radius: 5px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
 }
