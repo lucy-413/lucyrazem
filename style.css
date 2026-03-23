@@ -11,7 +11,6 @@ body {
     background: #720546;
     color: black;
 }
-
 /* Linki */
 a {
     display: inline-flex;
@@ -83,3 +82,21 @@ footer {
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
+
+/* ASCII */
+
+.ascii1 {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.ascii-middle {
+    color: #720546;
+}
+
+.ascii-middle.is-hovered {
+    transition: color 0.1s linear;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
