@@ -34,18 +34,22 @@ function loadHTML(id, filename) {
 document.addEventListener("DOMContentLoaded", () => {
     loadHTML("nav-placeholder", "nav.html");
     loadHTML("hobbies-placeholder", "hobbies.html");
-    loadHTML("footer-placeholder", "footer.html").then(showMayDayAudio);
+    loadHTML("footer-placeholder", "footer.html").then(applyEvents);
 });
 
-/* easter eggs */
+const events = [
+    { name: "mayday", date: "May 01" },
+    { name: "birthday", date: "May 05" }
+];
 
-var today = (Date().substring(4,10));
-function showMayDayAudio() {
-    const audio = document.getElementById("may-day-audio");
-    const br = document.getElementById("may-day-audio-br");
-    if (!audio || !br) return;
-    const hide = today !== "May 01";
-    audio.classList.toggle("hidden", hide);
-    br.classList.toggle("hidden", hide);
+function applyEvents() {
+    const today = Date().substring(4, 10);
+    events.forEach(({ name, date }) => {
+        const active = today === date;
+        document.body.classList.toggle(name, active);
+        document.querySelectorAll(`[data-event="${name}"]`).forEach(el => {
+            el.classList.toggle("hidden", !active);
+        });
+    });
 }
 

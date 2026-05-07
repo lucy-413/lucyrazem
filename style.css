@@ -7,6 +7,10 @@ body {
     padding-bottom: 150px;
 }
 
+body.mayday {
+    background-color: rgb(92, 0, 0);
+}
+
 ::selection {
     background: #720546;
     color: black;
@@ -47,6 +51,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
     position: fixed;
     bottom: 0px;
     background-color: black;
