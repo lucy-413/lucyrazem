@@ -1,6 +1,12 @@
+@property --ascii-hover {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
 /* Główne rzeczy */
 body {
-    background-color: black;
+    background-color: #1A1A1A;
     color: white;
     font-family: Courier, monospace;
     text-align: center;
@@ -12,8 +18,9 @@ body.mayday {
 }
 
 ::selection {
-    background: #720546;
+    background: #A4133C;
     color: black;
+    -webkit-text-fill-color: black;
 }
 /* Linki */
 a {
@@ -25,12 +32,12 @@ a {
 
 a:link,
 a:visited {
-    color: #720546;
+    color: #A4133C;
 }
 
 a:hover,
 a:active {
-    color: #580437;
+    color: #CB3F5A;
 }
 
 
@@ -55,52 +62,10 @@ footer {
     padding: 1rem 0;
     position: fixed;
     bottom: 0px;
-    background-color: black;
+    background-color: #1A1A1A;
     width: 100%;
     border-top: 2px dashed white;
 }
-
-
-audio::-webkit-media-controls-panel {
-    background-color: black;
-}
-audio::-webkit-media-controls-mute-button {
-    background-color: white;
-    filter: invert(100%);
-}
-audio::-webkit-media-controls-play-button{
-    background-color: white;
-    filter: invert(100%);
-}
-audio::-webkit-media-controls-current-time-display{
-    background-color: white;
-    filter: invert(100%);
-}
-audio::-webkit-media-controls-time-remaining-display{
-    background-color: white;
-    filter: invert(100%);
-}
-audio::-webkit-media-controls-timeline{
-    background-color: white;
-    filter: invert(100%);
-}
-audio::-webkit-media-controls-volume-slider{
-    background-color: white;
-    filter: invert(100%);
-}
-audio {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 40%;
-  height: 2rem;
-  position: relative;
-  border: 2px dashed white;
-}
-.hidden {
-  display: none;
-}
-
 
 /* Okna */
 .okno {
@@ -141,12 +106,23 @@ audio {
 }
 
 .ascii-middle {
-    color: #720546;
+    --ascii-hover: 0%;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+        90deg,
+        color-mix(in srgb, #5BCEFA var(--ascii-hover), #A4133C),
+        color-mix(in srgb, #F5A9B8 var(--ascii-hover), #A4133C),
+        color-mix(in srgb, #FFFFFF var(--ascii-hover), #A4133C),
+        color-mix(in srgb, #F5A9B8 var(--ascii-hover), #A4133C),
+        color-mix(in srgb, #5BCEFA var(--ascii-hover), #A4133C)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: --ascii-hover 0.2s ease;
 }
 
 .ascii-middle.is-hovered {
-    transition: color 0.1s linear;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    --ascii-hover: 100%;
+}
+
