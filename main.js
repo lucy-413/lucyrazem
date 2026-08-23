@@ -19,17 +19,14 @@ function initAsciiTouch() {
     const middleParts = document.querySelectorAll('.ascii-middle');
 
     middleParts.forEach(span => {
-        // FIXED: Use 'touchstart'
         span.addEventListener('touchstart', () => {
             middleParts.forEach(s => s.classList.add('is-hovered'));
-        }, { passive: true }); // passive: true is best practice for touch listeners that don't block scrolling
+        }, { passive: true });
 
-        // FIXED: Use 'touchend' and remove the relatedTarget check
         span.addEventListener('touchend', () => {
             middleParts.forEach(s => s.classList.remove('is-hovered'));
         });
 
-        // ADDED: touchcancel handles cases where the system interrupts the touch (like scrolling)
         span.addEventListener('touchcancel', () => {
             middleParts.forEach(s => s.classList.remove('is-hovered'));
         });
@@ -54,7 +51,7 @@ function loadHTML(id, filename) {
 
 document.addEventListener("DOMContentLoaded", () => {
     initAsciiHover();
-    initAsciiHover();
+    initAsciiTouch();
     loadHTML("nav-placeholder", "nav.html");
     loadHTML("hobbies-placeholder", "hobbies.html");
     loadHTML("footer-placeholder", "footer.html");
