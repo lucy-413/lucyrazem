@@ -49,10 +49,13 @@ function loadHTML(id, filename) {
         .catch(error => console.error(`Error loading HTML (${filename}):`, error));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     initAsciiHover();
     initAsciiTouch();
-    loadHTML("nav-placeholder", "nav.html");
-    loadHTML("hobbies-placeholder", "hobbies.html");
-    loadHTML("footer-placeholder", "footer.html");
+
+    await Promise.all([
+        loadHTML("nav-placeholder", "nav.html"),
+        loadHTML("hobbies-placeholder", "hobbies.html"),
+        loadHTML("footer-placeholder", "footer.html")
+    ]);
 });
