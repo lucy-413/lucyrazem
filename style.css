@@ -85,7 +85,7 @@ a:active {
     );
     -webkit-background-clip: text;
     background-clip: text;
-    transition: --ascii-hover 0.2s ease;
+    transition: --ascii-hover 0.6s ease;
 }
 
 .ascii-middle.is-hovered {
