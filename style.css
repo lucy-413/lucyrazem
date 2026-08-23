@@ -65,6 +65,8 @@ a:active {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(8px, 1.52vw, 27px);
     line-height: 1.12;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .ascii-middle {
