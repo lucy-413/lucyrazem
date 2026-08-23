@@ -68,8 +68,6 @@ a:active {
     line-height: 1.12;
     margin: 0 auto;
     display: inline-block;
-    text-align: left;
-    white-space: pre;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -188,6 +186,8 @@ a:active {
     height: 1.15em;
     object-fit: contain;
     vertical-align: middle;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 .social-links {
@@ -199,20 +199,13 @@ a:active {
     margin-top: 1.2rem;
 }
 
-.social-links a {
-    display: inline-block;
-    transition: transform 0.15s ease;
-}
-
-.social-links a:hover {
-    transform: scale(1.05);
-}
-
 .social-links a img {
     width: clamp(150px, 15vw, 280px);
     height: auto;
     max-width: 100%;
     display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 /* Mapka */
@@ -279,7 +272,7 @@ footer p {
 }
 
 /* Responsywność */
-@media (max-width: 860px), (max-height: 540px) {
+@media (max-width: 1000px), (max-height: 540px) {
     body {
         height: auto;
         min-height: 100vh;
@@ -288,10 +281,6 @@ footer p {
 
     .title {
         padding: 0.5rem 0.5rem 0.2rem;
-    }
-
-    .ascii1 {
-        font-size: clamp(6px, 1.8vw, 12px);
     }
 
     .container {
@@ -318,13 +307,5 @@ footer p {
         overflow-x: visible;
         font-size: 1.15rem;
         padding: 1.4rem;
-    }
-
-    .social-links a img {
-        width: 160px;
-    }
-
-    .badge img {
-        height: 31px;
     }
 }
