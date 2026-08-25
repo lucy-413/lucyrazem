@@ -63,10 +63,9 @@ a:active {
     display: inline-block;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     font-size: clamp(8px, 1.52vw, 27px);
     line-height: 1.12;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 .ascii-middle {
@@ -254,7 +253,7 @@ footer p {
 }
 
 /* Responsywność */
-@media (max-width: 1000px), (max-height: 540px) {
+@media (max-width: 900px) {
     body {
         height: auto;
         min-height: 100vh;
@@ -281,5 +280,11 @@ footer p {
         padding: 1.4rem;
         overflow: visible;
         font-size: 1.15rem;
+    }
+    .ascii1 {
+        font-size: clamp(8px, 2vw, 27px);
+        line-height: 1.12;
+        -webkit-user-select: none;
+        user-select: none;
     }
 }
