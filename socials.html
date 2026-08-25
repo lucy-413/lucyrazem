@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <div class="title">
-        <pre class="ascii1">
+    <header class="title">
+        <pre class="ascii1" aria-hidden="true">
 
   _                                                                   
  | |                                                                  
@@ -21,27 +21,33 @@
                 __/ |                                                 
                |___/                                                  
         </pre>
-    </div>
+    </header>
 
     <div class="container">
-        <div id="nav-placeholder" class="okno"></div>
+        <nav id="nav-placeholder" class="okno" aria-label="Primary"></nav>
 
-        <div class="okno">
-            <h2>Socials</h2>
-            <div class="social-links">
-                <a href="https://x.com/lucy_413" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/twitterbutton.gif" alt="Twitter">
-                </a>
-                <a href="https://steamcommunity.com/profiles/76561199033150769/" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/steam.gif" alt="Steam">
-                </a>
-                <a href="mailto:lucy413@pm.me">
-                    <img src="/assets/mail.png" alt="Mail">
-                </a>
-            </div>
-        </div>
+        <main class="okno">
+            <h1>Socials</h1>
+            <ul class="social-links">
+                <li>
+                    <a href="https://x.com/lucy_413" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/twitterbutton.gif" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://steamcommunity.com/profiles/76561199033150769/" target="_blank" rel="noopener noreferrer">
+                        <img src="/assets/steam.gif" alt="Steam">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:lucy413@pm.me">
+                        <img src="/assets/mail.png" alt="Email Lucy">
+                    </a>
+                </li>
+            </ul>
+        </main>
 
-        <div id="hobbies-placeholder" class="okno"></div>
+        <aside id="hobbies-placeholder" class="okno"></aside>
     </div>
 
     <div id="footer-placeholder"></div>

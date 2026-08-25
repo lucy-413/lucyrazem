@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <div class="title">
-        <pre class="ascii1">
+    <header class="title">
+        <pre class="ascii1" aria-hidden="true">
 
   _                                                                   
  | |                                                                  
@@ -21,32 +21,48 @@
                 __/ |                                                 
                |___/                                                  
         </pre>
-    </div>
+    </header>
 
     <div class="container">
-        <div id="nav-placeholder" class="okno"></div>
+        <nav id="nav-placeholder" class="okno" aria-label="Primary"></nav>
 
-        <div class="okno">
-            <h2>Hardware</h2>
+        <main class="okno">
+            <h1>Hardware</h1>
             <section>
-                <h3>Laptop</h3>
+                <h2>Laptop</h2>
                 <p>M4 Macbook Air (2025)</p>
             </section>
             <section>
-                <h3>PC</h3>
-                <p>OS: Fedora 44</p>
-                <p>CPU: AMD Ryzen 5 5600x</p>
-                <p>GPU: AMD Radeon RX 9070 XT</p>
-                <p>RAM: 32GB DDR4 3600mhz</p>
+                <h2>PC</h2>
+                <dl class="spec-list">
+                    <div>
+                        <dt>OS:</dt>
+                        <dd>Fedora 44</dd>
+                    </div>
+                    <div>
+                        <dt>CPU:</dt>
+                        <dd>AMD Ryzen 5 5600x</dd>
+                    </div>
+                    <div>
+                        <dt>GPU:</dt>
+                        <dd>AMD Radeon RX 9070 XT</dd>
+                    </div>
+                    <div>
+                        <dt>RAM:</dt>
+                        <dd>32GB DDR4 3600mhz</dd>
+                    </div>
+                </dl>
             </section>
             <section>
-                <h3>Other</h3>
-                <p>iPhone 15 Pro Max 512GB</p>
-                <p>AirPods Max</p>
+                <h2>Other</h2>
+                <ul class="text-list">
+                    <li>iPhone 15 Pro Max 512GB</li>
+                    <li>AirPods Max</li>
+                </ul>
             </section>
-        </div>
+        </main>
 
-        <div id="hobbies-placeholder" class="okno"></div>
+        <aside id="hobbies-placeholder" class="okno"></aside>
     </div>
 
     <div id="footer-placeholder"></div>

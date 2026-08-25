@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <div class="title">
-        <pre class="ascii1">
+    <header class="title">
+        <pre class="ascii1" aria-hidden="true">
 
   _                                                                   
  | |                                                                  
@@ -21,19 +21,19 @@
                 __/ |                                                 
                |___/                                                  
         </pre>
-    </div>
+    </header>
 
     <div class="container">
-        <div id="nav-placeholder" class="okno"></div>
+        <nav id="nav-placeholder" class="okno" aria-label="Primary"></nav>
 
-        <div class="okno">
-            <h2>404 - Not Found</h2>
+        <main class="okno">
+            <h1>404 - Not Found</h1>
             <p>Oh no! Something went wrong!</p>
             <p>Not my beautiful code!</p>
-            <p style="margin-top: 1rem;"><a href="/">← Back to Home</a></p>
-        </div>
+            <a class="back-link" href="/">← Back to Home</a>
+        </main>
 
-        <div id="hobbies-placeholder" class="okno"></div>
+        <aside id="hobbies-placeholder" class="okno"></aside>
     </div>
 
     <div id="footer-placeholder"></div>

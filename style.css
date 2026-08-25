@@ -66,6 +66,7 @@ a:active {
     font-weight: bold;
     font-size: clamp(8px, 1.52vw, 27px);
     line-height: 1.12;
+    text-align: left;
 }
 
 .ascii-middle {
@@ -131,12 +132,15 @@ a:active {
     width: 100%;
 }
 
-.okno h2 {
+.okno h1,
+.okno > h2,
+.okno article > h2 {
     flex-shrink: 0;
     margin: 0.2em 0 0.8em;
     font-size: clamp(1.5rem, 2.2vw, 3rem);
 }
 
+.okno section > h2,
 .okno h3 {
     margin: 0.8em 0 0.4em;
     font-size: clamp(1.2rem, 1.75vw, 2.3rem);
@@ -147,12 +151,54 @@ a:active {
     line-height: 1.45;
 }
 
+.link-list,
+.text-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link-list li,
+.text-list li {
+    margin: 0.45em 0;
+    line-height: 1.45;
+}
+
+.spec-list {
+    margin: 0;
+}
+
+.spec-list div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45em;
+    margin: 0.45em 0;
+    line-height: 1.45;
+}
+
+.spec-list dt {
+    font-weight: bold;
+}
+
+.spec-list dd {
+    margin: 0;
+}
+
 .okno a img {
     width: 1.15em;
     height: 1.15em;
     object-fit: contain;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
+}
+
+.gallery-link {
+    margin: 0.45em 0;
+}
+
+.back-link {
+    margin-top: 1rem;
 }
 
 /* Pasek przewijania */
@@ -180,7 +226,9 @@ a:active {
     align-items: center;
     gap: clamp(1.2rem, 2vw, 2.5rem);
     width: 100%;
-    margin-top: 1.2rem;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
 }
 
 .social-links a img {
@@ -231,6 +279,9 @@ footer {
     align-items: center;
     gap: clamp(0.5rem, 0.75vw, 0.9rem);
     width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .badge {
@@ -247,7 +298,7 @@ footer {
     image-rendering: crisp-edges;
 }
 
-footer p {
+footer .copyright {
     margin: 0;
     font-size: clamp(0.85rem, 1.05vw, 1.25rem);
 }

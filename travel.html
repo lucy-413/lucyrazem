@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <div class="title">
-        <pre class="ascii1">
+    <header class="title">
+        <pre class="ascii1" aria-hidden="true">
 
   _                                                                   
  | |                                                                  
@@ -21,18 +21,21 @@
                 __/ |                                                 
                |___/                                                  
         </pre>
-    </div>
+    </header>
 
     <div class="container">
-        <div id="nav-placeholder" class="okno"></div>
+        <nav id="nav-placeholder" class="okno" aria-label="Primary"></nav>
 
-        <div class="okno travel-okno">
+        <main class="okno travel-okno">
+            <h1>Travel</h1>
             <article>
                 <h2>Voivodeships</h2>
+                <p>Completed on <time datetime="2026-08-20">20.08.2026</time>.</p>
                 <p>An attempt to beat the record for going through all of Poland's Voivodeships by trains in the shortest time possible. Sadly due to delays our final time was 24h 17m - 45 longer than the previous record.</p>
-
+                <a class="gallery-link" href="./gallery.html">Gallery</a>
                 <div class="map-scaler">
-                    <iframe src="https://embed.viaduct.world/j/NXrwjFrKHiPU2h4S?layer=Dark&tabs=map"
+                    <iframe src="https://embed.viaduct.world/j/NXrwjFrKHiPU2h4S?layer=Dark&amp;tabs=map"
+                            title="Map of the Voivodeships train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -42,10 +45,12 @@
 
             <article>
                 <h2>Krakow - Prague - Dresden</h2>
-                <p>A shorter weekend trip</p>
-
+                <p>Completed between <time datetime="2026-05-22">22.05.2026</time> and <time datetime="2026-05-24">24.05.2026</time>.</p>
+                <p>A quick weekend train trip with friends, exploring the historic cities of Prague and Dresden.</p>
+                <a class="gallery-link" href="./gallery.html">Gallery</a>
                 <div class="map-scaler">
-                    <iframe src="https://embed.viaduct.world/j/ghmmV-pT_N8aEotE?layer=Dark&tabs=map,trips,stats"
+                    <iframe src="https://embed.viaduct.world/j/ghmmV-pT_N8aEotE?layer=Dark&amp;tabs=map,trips,stats"
+                            title="Map of the Krakow, Prague, and Dresden train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -55,19 +60,21 @@
 
             <article>
                 <h2>Europe - Asia</h2>
+                <p>TBD</p>
                 <p>Currently planning to get from Poland to China and Vietnam with a group of friends through the middle corridor using mostly trains.</p>
-
+                <a class="gallery-link" href="./gallery.html">Gallery</a>
                 <div class="map-scaler">
-                    <iframe src="https://embed.viaduct.world/j/3EXYLZtV9UyABaLr?layer=Dark&tabs=map"
+                    <iframe src="https://embed.viaduct.world/j/3EXYLZtV9UyABaLr?layer=Dark&amp;tabs=map"
+                            title="Map of the planned Europe to Asia train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </article>
-        </div>
+        </main>
 
-        <div id="hobbies-placeholder" class="okno"></div>
+        <aside id="hobbies-placeholder" class="okno"></aside>
     </div>
 
     <div id="footer-placeholder"></div>
