@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     initAsciiTouch();
 
     await Promise.all([
-        loadHTML("nav-placeholder", "nav.html"),
-        loadHTML("hobbies-placeholder", "hobbies.html"),
-        loadHTML("footer-placeholder", "footer.html")
+        loadHTML("nav-placeholder", "/nav.html"),
+        loadHTML("hobbies-placeholder", "/hobbies.html"),
+        loadHTML("footer-placeholder", "/footer.html")
     ]);
 });
