@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lucyrazem/travel</title>
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" type="image/x-icon" href="/assets/icon.svg">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
 </head>
 <body>
 
     <header class="title">
+        <span class="sr-only">lucyrazem.com</span>
         <pre class="ascii1" aria-hidden="true">
 
   _                                                                   
@@ -31,53 +32,53 @@
             <article>
                 <h2>Voivodeships</h2>
                 <p>Completed on <time datetime="2026-08-20">20.08.2026</time>.</p>
-                <p>An attempt to beat the record for going through all of Poland's Voivodeships by trains in the shortest time possible. Sadly due to delays our final time was 24h 17m - 45 minutes longer than the previous record.</p>
-                <a class="gallery-link" href="/gallery">Gallery</a>
-                <div class="map-scaler">
+                <p>An attempt to beat the record for going through all of Poland's Voivodeships by trains in the shortest time possible. Sadly due to delays our final time was <time datetime="PT24H17M">24h 17m</time> - <time datetime="PT45M">45 minutes</time> longer than the previous record.</p>
+                <p class="gallery-link"><a href="/gallery" aria-label="Voivodeships gallery">Gallery</a></p>
+                <figure class="map-scaler">
                     <iframe src="https://embed.viaduct.world/j/NXrwjFrKHiPU2h4S?layer=Dark&amp;tabs=map,trips,stats"
                             title="Map of the Voivodeships train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
+                </figure>
             </article>
 
             <article>
                 <h2>Krakow - Prague - Dresden</h2>
                 <p>Completed between <time datetime="2026-05-22">22.05.2026</time> and <time datetime="2026-05-24">24.05.2026</time>.</p>
                 <p>A quick weekend train trip with friends, exploring the historic cities of Prague and Dresden.</p>
-                <a class="gallery-link" href="/gallery">Gallery</a>
-                <div class="map-scaler">
+                <p class="gallery-link"><a href="/gallery" aria-label="Krakow - Prague - Dresden gallery">Gallery</a></p>
+                <figure class="map-scaler">
                     <iframe src="https://embed.viaduct.world/j/ghmmV-pT_N8aEotE?layer=Dark&amp;tabs=map,trips,stats"
                             title="Map of the Krakow, Prague, and Dresden train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
+                </figure>
             </article>
 
             <article>
                 <h2>Europe - Asia</h2>
                 <p>TBD</p>
                 <p>Currently planning to get from Poland to China and Vietnam with a group of friends through the middle corridor using mostly trains.</p>
-                <a class="gallery-link" href="/gallery">Gallery</a>
-                <div class="map-scaler">
+                <p class="gallery-link"><a href="/gallery" aria-label="Europe - Asia gallery">Gallery</a></p>
+                <figure class="map-scaler">
                     <iframe src="https://embed.viaduct.world/j/3EXYLZtV9UyABaLr?layer=Dark&amp;tabs=map"
                             title="Map of the planned Europe to Asia train journey"
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
+                </figure>
             </article>
         </main>
 
-        <aside id="hobbies-placeholder" class="okno"></aside>
+        <aside id="hobbies-placeholder" class="okno" aria-label="Hobbies"></aside>
     </div>
 
-    <div id="footer-placeholder"></div>
+    <footer id="footer-placeholder"></footer>
 
     <script src="/js/main.js"></script>
 

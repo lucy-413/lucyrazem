@@ -49,12 +49,24 @@ function loadHTML(id, filename) {
         .catch(error => console.error(`Error loading HTML (${filename}):`, error));
 }
 
+function markCurrentNavLink() {
+    const normalizePath = path => path.replace(/\/index\.html$/, '').replace(/\/+$/, '') || '/';
+    const currentPath = normalizePath(window.location.pathname);
+
+    document.querySelectorAll('#nav-placeholder a[href]').forEach(link => {
+        const url = new URL(link.href, window.location.origin);
+        if (url.origin === window.location.origin && normalizePath(url.pathname) === currentPath) {
+            link.setAttribute('aria-current', 'page');
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     initAsciiHover();
     initAsciiTouch();
 
     await Promise.all([
-        loadHTML("nav-placeholder", "/nav.html"),
+        loadHTML("nav-placeholder", "/nav.html").then(markCurrentNavLink),
         loadHTML("hobbies-placeholder", "/hobbies.html"),
         loadHTML("footer-placeholder", "/footer.html")
     ]);
