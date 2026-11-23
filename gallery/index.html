@@ -27,9 +27,79 @@
     <div class="container">
         <nav id="nav-placeholder" class="okno" aria-label="Primary"></nav>
 
-        <main class="okno">
+        <main class="okno gallery-okno">
             <h1>Gallery</h1>
-            <p>Work in progress</p>
+
+            <div class="gallery-picker" role="region" aria-label="Gallery folders">
+                <details class="gallery-folder" open>
+                    <summary class="gallery-folder-toggle">
+                        <svg class="folder-arrow" viewBox="0 0 12 12" aria-hidden="true">
+                            <polygon points="3,1 10,6 3,11" fill="currentColor"></polygon>
+                        </svg>
+                        <svg class="folder-icon folder-icon-closed" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M1 3h5l2 2h7v9H1V3zm1 1v9h12V6H7.6L5.6 4H2z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="folder-icon folder-icon-open" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M1 3h5l2 2h6v2H3.5L2 13H1V3zm2.3 5H15l-1.5 6H1.8L3.3 8zm1.1 1-1 4h9.3l1-4H4.4z" fill="currentColor"></path>
+                        </svg>
+                        <span class="folder-label">travel</span>
+                    </summary>
+                    <ul class="gallery-tree-list">
+                        <li>
+                            <a href="/gallery/travel/voivodeships/">
+                                <svg class="album-icon" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M1 2h14v12H1V2zm1 1v10h12V3H2zm2 7 2.5-3 2 2.2 1.8-2.2L13 10v2H4v-2zm2-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"></path>
+                                </svg>
+                                <span>Voivodeships</span>
+                                <span class="album-meta">(20.08.2026)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/gallery/travel/krakow-prague-dresden/">
+                                <svg class="album-icon" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M1 2h14v12H1V2zm1 1v10h12V3H2zm2 7 2.5-3 2 2.2 1.8-2.2L13 10v2H4v-2zm2-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"></path>
+                                </svg>
+                                <span>Krakow - Prague - Dresden</span>
+                                <span class="album-meta">(22-24.05.2026)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/gallery/travel/europe-asia/">
+                                <svg class="album-icon" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M1 2h14v12H1V2zm1 1v10h12V3H2zm2 7 2.5-3 2 2.2 1.8-2.2L13 10v2H4v-2zm2-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"></path>
+                                </svg>
+                                <span>Europe - Asia</span>
+                                <span class="album-meta">(TBD)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+
+                <details class="gallery-folder">
+                    <summary class="gallery-folder-toggle">
+                        <svg class="folder-arrow" viewBox="0 0 12 12" aria-hidden="true">
+                            <polygon points="3,1 10,6 3,11" fill="currentColor"></polygon>
+                        </svg>
+                        <svg class="folder-icon folder-icon-closed" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M1 3h5l2 2h7v9H1V3zm1 1v9h12V6H7.6L5.6 4H2z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="folder-icon folder-icon-open" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M1 3h5l2 2h6v2H3.5L2 13H1V3zm2.3 5H15l-1.5 6H1.8L3.3 8zm1.1 1-1 4h9.3l1-4H4.4z" fill="currentColor"></path>
+                        </svg>
+                        <span class="folder-label">other</span>
+                    </summary>
+                    <ul class="gallery-tree-list">
+                        <li>
+                            <a href="/gallery/other/">
+                                <svg class="album-icon" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M1 2h14v12H1V2zm1 1v10h12V3H2zm2 7 2.5-3 2 2.2 1.8-2.2L13 10v2H4v-2zm2-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"></path>
+                                </svg>
+                                <span>Miscellaneous</span>
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
         </main>
 
         <aside id="hobbies-placeholder" class="okno" aria-label="Hobbies"></aside>
