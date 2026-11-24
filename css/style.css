@@ -204,8 +204,8 @@ a:active {
     width: 1.15em;
     height: 1.15em;
     object-fit: contain;
-    image-rendering: pixelated;
     image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
 .gallery-link {
@@ -311,14 +311,24 @@ a:active {
 }
 
 .folder-arrow {
-    width: 0.65em;
-    height: 0.65em;
+    width: 0.85em;
+    height: 0.85em;
     flex-shrink: 0;
-    transition: transform 0.15s ease;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
-.gallery-folder[open] > .gallery-folder-toggle .folder-arrow {
-    transform: rotate(90deg);
+.folder-arrow-open {
+    display: none;
+}
+
+.gallery-folder[open] > .gallery-folder-toggle .folder-arrow-closed {
+    display: none;
+}
+
+.gallery-folder[open] > .gallery-folder-toggle .folder-arrow-open {
+    display: inline-block;
 }
 
 .folder-icon,
@@ -327,8 +337,8 @@ a:active {
     height: 1.15em;
     flex-shrink: 0;
     object-fit: contain;
-    image-rendering: pixelated;
     image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 
 .folder-icon-open {
