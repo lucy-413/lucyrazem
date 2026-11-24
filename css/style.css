@@ -323,9 +323,12 @@ a:active {
 
 .folder-icon,
 .album-icon {
-    width: 1.05em;
-    height: 1.05em;
+    width: 1.15em;
+    height: 1.15em;
     flex-shrink: 0;
+    object-fit: contain;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 .folder-icon-open {
