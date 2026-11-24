@@ -296,8 +296,10 @@ a:active {
     user-select: none;
 }
 
-.gallery-folder-toggle::-webkit-details-marker {
+.gallery-folder-toggle::-webkit-details-marker,
+.gallery-folder-toggle::marker {
     display: none;
+    content: "";
 }
 
 .gallery-folder-toggle:hover,
